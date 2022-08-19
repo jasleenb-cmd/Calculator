@@ -1,5 +1,3 @@
-# Program make a simple calculator
-
 # This function adds two numbers
 def add(x, y):
     return x + y
@@ -30,8 +28,11 @@ while True:
     # take input from the user
     choice = input("Enter choice(1/2/3/4): ")
 
+    if choice not in ('1', '2', '3', '4'):
+        print("Invalid Input")
+
     # check if choice is one of the four options
-    if choice in ('1', '2', '3', '4'):
+    else:
         num1 = float(input("Enter first number: "))
         num2 = float(input("Enter second number: "))
 
@@ -52,6 +53,3 @@ while True:
         next_calculation = input("Repeat calculation? (yes/no): ")
         if next_calculation == "no":
             break
-
-    else:
-        print("Invalid Input")
